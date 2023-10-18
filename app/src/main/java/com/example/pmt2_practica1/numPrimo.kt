@@ -12,9 +12,13 @@ class numPrimo : AppCompatActivity() {
     private fun cal_primos(n:Int):ArrayList<Int>{
         var elementos = ArrayList<Int>()
 
-        for(i in 1 < .. < n){
-
+        for(i in 1  ..  n){
+            if(esPrimo(i, i-1)){
+                elementos.add(i)
+            }
         }
+
+        return elementos
     }
 
     private fun esPrimo(n:Int, divisor:Int):Boolean{
